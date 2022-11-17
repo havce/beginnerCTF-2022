@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastebin</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #title {
+            text-align: center;
+        }
+        #text {
+            width: 80%;
+            height: 500px;
+            margin: auto;
+            display: block;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            font-size: 30px;
+        }
+        button {
+            width: 20%;
+            height: 50px;
+            display: block;
+            margin: auto;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">PASTEBIN</h1>
+    <form action="/paste" method="POST">
+        <textarea name="code" id="text" placeholder="Write your code here..." spellcheck="false"></textarea>
+        <button type="submit">SUBMIT</button>
+    
+    </form>
+
+</body>
+</html>
