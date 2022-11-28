@@ -1,1 +1,1 @@
-ciaociao
+flag{ret2win_is_way_to_easy}
