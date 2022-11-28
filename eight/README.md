@@ -1,4 +1,4 @@
-# Secure login
+# Eigth
 
 ## Description
 > I've heard that bit-a-bit cryptography is secure... so a byte-a-byte encryption is 8 times more secure!
