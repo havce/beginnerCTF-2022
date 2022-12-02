@@ -1,1 +1,0 @@
-havceCTF{this_is_a_dummy_flag}

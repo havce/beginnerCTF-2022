@@ -1,0 +1,46 @@
+version: "3"
+services:
+  buff1:
+    build: ./buff1
+    ports:
+      - "31337:3001"
+    privileged: true
+    environment:
+      - FLAG=${FLAG_BUFF1}
+  flag_hash:
+    image: php:8.0-apache
+    volumes:
+      - ./flag-hash:/var/www/html:ro
+    environment:
+      - FLAG=${FLAG_HASH}
+    ports:
+      - "8000:80"
+  havcebin:
+    build: ./havcebin
+    volumes:
+      - havcebin:/home/havcebin/.storage
+    environment:
+      - FLAG=${FLAG_HAVCEBIN}
+    ports:
+      - "8080:8080"
+  hidden_flag:
+    build: ./hidden-flag
+    environment:
+      - FLAG=${FLAG_HIDDEN_FLAG}
+    ports:
+      - "8008:3000"
+  login:
+    build: ./login
+    privileged: true
+    environment:
+      - FLAG=${FLAG_LOGIN}
+    ports:
+      - "31338:3001"
+  quiz:
+    build: ./quiz
+    environment:
+      - FLAG=${FLAG_QUIZ}
+    ports:
+      - "31339:1337"
+volumes:
+  havcebin:
