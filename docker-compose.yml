@@ -34,6 +34,13 @@ services:
       - FLAG=${FLAG_LOGIN}
     ports:
       - "31338:3001"
+  lottery:
+    build: ./lottery
+    privileged: true
+    environment:
+      - FLAG=${FLAG_LOTTERY}
+    ports:
+      - "31340:3001"
   quiz:
     build: ./quiz
     environment:
