@@ -4,7 +4,7 @@ import (
 	"context"
 	"havcebin"
 	"os"
-	"path"
+	"path/filepath"
 )
 
 // Ensure PasteService implements interface.
@@ -24,7 +24,7 @@ func (p *PasteService) LoadPaste(ctx context.Context, name string) (string, erro
 	// Sanitize name.
 	name = sanitizeName(name)
 
-	sanePath := path.Join(p.BasePath, path.Clean(name))
+	sanePath := filepath.Join(p.BasePath, filepath.Clean(name))
 
 	paste, err := os.ReadFile(sanePath)
 	if err != nil {
@@ -38,7 +38,7 @@ func (p *PasteService) SavePaste(ctx context.Context, name string, content strin
 	// Sanitize name.
 	name = sanitizeName(name)
 
-	sanePath := path.Join(p.BasePath, path.Clean(name))
+	sanePath := filepath.Join(p.BasePath, filepath.Clean(name))
 
 	// We don't want other users to read our precious files.
 	return os.WriteFile(sanePath, []byte(content), 0600)
