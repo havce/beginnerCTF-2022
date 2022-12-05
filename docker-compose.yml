@@ -8,13 +8,11 @@ services:
     environment:
       - FLAG=${FLAG_BUFF1}
   flag_hash:
-    image: php:8.0-apache
-    volumes:
-      - ./flag-hash:/var/www/html:ro
+    build: ./flag-hash
     environment:
       - FLAG=${FLAG_HASH}
     ports:
-      - "8000:80"
+      - "8888:80"
   havcebin:
     build: ./havcebin
     volumes:
@@ -28,7 +26,7 @@ services:
     environment:
       - FLAG=${FLAG_HIDDEN_FLAG}
     ports:
-      - "8008:3000"
+      - "8808:3000"
   login:
     build: ./login
     privileged: true
