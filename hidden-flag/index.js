@@ -46,20 +46,8 @@ app.get('/robots.txt', (req, res) => {
 })
 
 app.get('/GoToThis3ndP0intTOGetd4Fl4g', (req, res) => {
-    var options = {
-        root: path.join(__dirname)
-    };
-    var fileName = 'flag.txt';
-    res.sendFile(fileName, options, function (err) {
-        if (err) {
-            next(err);
-        } else {
-            console.log('Sent:', fileName);
-        }
-    });
+    res.send(process.env.FLAG);
 })
-
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

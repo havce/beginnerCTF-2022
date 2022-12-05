@@ -113,7 +113,6 @@ $$ |  $$ |$$ |  $$ |$$ | $$  _/
       $$ |                        
       \__|                        
 
-
 		`)
 	if err != nil {
 		return err
@@ -173,7 +172,7 @@ Let's start!`)
 		}
 	}
 
-	flag := os.Getenv("flag")
+	flag := os.Getenv("FLAG")
 
 	if _, err := fmt.Fprintf(c, "You won! Congrats, here's your flag: %s.", flag); err != nil {
 		return err

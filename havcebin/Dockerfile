@@ -1,24 +1,26 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.19-buster AS build
+FROM golang:1.19-alpine AS build
 ENV CGO_ENABLED=0
 
 WORKDIR /app
 
-COPY ./havcebin ./
+COPY ./go.mod ./
+COPY ./go.sum ./
+
+RUN go mod download
+
+COPY ./ ./
 
 RUN go build -o havcebin ./cmd/havcebind 
 
-FROM gcr.io/distroless/static
-
-WORKDIR /
+FROM alpine:3.17
 
 COPY --from=build /app/havcebin /havcebin
-COPY ./flag.txt /
-COPY --chown=nonroot:nonroot ./HelloWorld /code/HelloWorld
 
-EXPOSE 8080
+RUN adduser -D -S havcebin
 
-USER nonroot:nonroot
+RUN mkdir -p /home/havcebin/.storage && chown -R havcebin /home/havcebin
 
-ENTRYPOINT ["/havcebin"]
+USER havcebin
+CMD ["/bin/sh", "-c", "echo \"${FLAG}\" > /home/havcebin/flag.txt && /havcebin -save-dir ~/.storage"]
