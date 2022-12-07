@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        havce flag shop
+    </title>
+    <style>
+        .shop {
+            display: flex;
+        }
+
+        .item {
+            padding: 12px;
+            margin:0 4px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ti diamo il benvenuto al flag shop di havce</h1>
+    <h2>Hai a disposizione <%= credito %>$.</h2>
+    <div class="shop">
+        <div class="item">
+            <h2>Una mucca</h2>
+            <p>1$</p>
+            <form action="/compera" method="post">
+                <input type="hidden" name="object" value="mucca">
+                <input type="number" id="qty" name="qty" value="1" required max="10">
+                <input type="submit" value="Compra!">
+            </form>
+        </div>
+        <div class="item">
+            <h2>Un orso</h2>
+            <p>2$</p>
+            <form action="/compera" method="post">
+                <input type="hidden" name="object" value="orso">
+                <input type="number" id="qty" name="qty" value="1" required max="10">
+                <input type="submit" value="Compra!">
+            </form>
+        </div>
+        <div class="item">
+            <h2>La flag</h2>
+            <p>10000000$</p>
+            <form action="/flag" method="get">
+                <input type="submit" value="Compra!">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

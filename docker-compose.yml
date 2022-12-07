@@ -47,5 +47,11 @@ services:
       - FLAG=${FLAG_QUIZ}
     ports:
       - "31339:1337"
+  flag-shop:
+    build: ./flag-shop
+    environment:
+      - FLAG=${FLAG_SHOP}
+    ports:
+      - "8181:3000"
 volumes:
   havcebin:

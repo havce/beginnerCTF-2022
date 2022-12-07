@@ -1,0 +1,19 @@
+{
+  "name": "flag-shop",
+  "version": "1.0.0",
+  "description": "A flag shop. Secure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flag"
+  ],
+  "author": "kriive",
+  "license": "WTFPL",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  }
+}
