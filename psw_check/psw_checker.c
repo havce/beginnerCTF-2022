@@ -25,7 +25,7 @@ int main(void){
 	char name [DIM_VARIABLE];
 	char psw[DIM_VARIABLE];
 	do{
-		puts("inserisci il tuo username:");
+		puts("Inserisci il tuo username:");
 		fgets(name, DIM_VARIABLE, stdin);
 	    name[strlen(name) - 1] = '\0';
 		puts("Inserisci la tua password:");
@@ -37,7 +37,7 @@ int main(void){
 		   stamp_flag();
 		   break;
 	    } else{
-	    	puts("credenziali errate ! ");
+	    	puts("Credenziali errate ! ");
 	    }
 	}while(1);
 return 0;
