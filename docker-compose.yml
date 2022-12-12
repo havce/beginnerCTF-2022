@@ -47,6 +47,14 @@ services:
     ports:
       - "31340:3001"
     restart: unless-stopped
+  psw_check:
+    build: ./psw_check
+    privileged: true
+    environment:
+      - FLAG=${FLAG_PSW_CHECK}
+    ports:
+      - "31350:3001"
+    restart: unless-stopped
   quiz:
     build: ./quiz
     environment:
