@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define BUF_SIZE 32
+#define BUF_SIZE 64
 
 void win() {
   puts("good job");
