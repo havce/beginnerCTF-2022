@@ -7,12 +7,14 @@ services:
     privileged: true
     environment:
       - FLAG=${FLAG_BUFF1}
+    restart: unless-stopped
   flag_hash:
     build: ./flag-hash
     environment:
       - FLAG=${FLAG_HASH}
     ports:
       - "8888:80"
+    restart: unless-stopped
   havcebin:
     build: ./havcebin
     volumes:
@@ -21,12 +23,14 @@ services:
       - FLAG=${FLAG_HAVCEBIN}
     ports:
       - "8080:8080"
+    restart: unless-stopped
   hidden_flag:
     build: ./hidden-flag
     environment:
       - FLAG=${FLAG_HIDDEN_FLAG}
     ports:
       - "8808:3000"
+    restart: unless-stopped
   login:
     build: ./login
     privileged: true
@@ -34,6 +38,7 @@ services:
       - FLAG=${FLAG_LOGIN}
     ports:
       - "31338:3001"
+    restart: unless-stopped
   lottery:
     build: ./lottery
     privileged: true
@@ -41,17 +46,20 @@ services:
       - FLAG=${FLAG_LOTTERY}
     ports:
       - "31340:3001"
+    restart: unless-stopped
   quiz:
     build: ./quiz
     environment:
       - FLAG=${FLAG_QUIZ}
     ports:
       - "31339:1337"
+    restart: unless-stopped
   flag-shop:
     build: ./flag-shop
     environment:
       - FLAG=${FLAG_SHOP}
     ports:
       - "8181:3000"
+    restart: unless-stopped
 volumes:
   havcebin:
