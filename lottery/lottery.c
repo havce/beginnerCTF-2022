@@ -35,7 +35,7 @@ long long get_random() {
 int main() {
   long long guess = 0;
   FILE* flag = NULL;
-  char buf[32];
+  char buf[128];
 
   setup();
   print_banner();
@@ -58,7 +58,7 @@ int main() {
     return EXIT_FAILURE;
   }
   
-  char *f = fgets(buf, 32, flag);
+  char *f = fgets(buf, 128, flag);
   if (!f && ferror(flag)) {
     fprintf(stderr, "Couldn't read file flag.txt. Contact the admins.");
     return EXIT_FAILURE;
