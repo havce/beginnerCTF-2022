@@ -6,7 +6,7 @@
 #define BUF_SIZE 64
 
 void win() {
-  puts("good job");
+  puts("Well done! Here's a gift for you ");
   char flag[BUF_SIZE];
 
   int fd = open("./flag.txt", O_RDONLY);
@@ -21,9 +21,9 @@ int main(void) {
   setbuf(stdin, NULL);
   setbuf(stderr, NULL);
 
-  puts("can i know hour name to say hello?");
+  puts("Hey, what's your name?");
   char name[BUF_SIZE];
 
   gets(name);
-  printf("hi %s !!\n", name);
+  printf("Hi %s! Hope you're doing well.\n", name);
 }
