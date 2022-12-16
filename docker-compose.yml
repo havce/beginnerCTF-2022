@@ -8,6 +8,14 @@ services:
     environment:
       - FLAG=${FLAG_BUFF1}
     restart: unless-stopped
+  scope:
+    build: ./scope
+    ports:
+      - "31313:3001"
+    privileged: true
+    environment:
+      - FLAG=${FLAG_SCOPE}
+    restart: unless-stopped
   flag_hash:
     build: ./flag-hash
     environment:
