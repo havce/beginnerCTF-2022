@@ -4,3 +4,8 @@
 
 ## Flag
 `havceCTF{th1s_1s_n0t_v3ry_s3cur3}`
+
+## Solution
+
+The flag is encoded using an algorithm called rot13 (or Caesar Cipher), it simly shifts the letters 13 characters and doesn't
+move numbers or symbols. Fun fact: you can see how our team name was created.
