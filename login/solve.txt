@@ -1,4 +1,6 @@
-la vulnerabilità di questa challenge è un overflow sulle scanf di user psw e cf in questo modo se nell'input di codice fiscale andremo a rempire tutto il buffer di 16 caratteri e successivamente inseriremo un valore diverso da 0 andremo a sovrascrivere auth e avremo la nostra flag.
+la vulnerabilità di questa challenge è un overflow sulle scanf di user psw e cf.
+In questo modo nell'input di codice fiscale potremo rempire tutto il buffer di 16 caratteri e successivamente inseriremo un valore diverso da 0 e 
+andremo a sovrascrivere auth cosi da ottenere la flag.
 input da mandare AAAAAAAAAAAAAAAA1
 output ottenuto : 
 --------LOGIN--------
