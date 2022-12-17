@@ -1,0 +1,3 @@
+nella challenge ti veniva dato un insieme di 0 e 1 che significavano rispettivamente sinistra e destra con la quale potevi muoverti nell'albero e trovare i caratteri della flag.
+
+flag : havceCTF{Tree_1over}
