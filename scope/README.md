@@ -18,12 +18,13 @@ res = system(buf) == 0;
 If you input `"; cat flag.txt #` you effectively execute `cat flag.txt`. 
 
 In the original exploit, you didn't know the admin password, so you
-can't trigger the command injection. In this snippet there is another
-vulnerability: the `strncmp` function is broken. If you send an empty string
-you can bypass the check, thus enabling the command injection vulnerability.
+couldn't trigger the command injection without knowing the password.
 
-This vulnerability has been found in the wild in a Oscilloscope running
-Linux.
+In this snippet there is another vulnerability: the check via the `strncmp` function is broken. 
+If you send an empty string you can bypass the check and enable the command injection
+vulnerability (`strncmp` called with len==0 always returns 0).
+
+This vulnerability has been found in the wild in a oscilloscope running Linux.
 
 ## Flag
 `havceCTF{1his_1s_4ctually_a_vuln_f00und_1n_th3_w1iiild}`
