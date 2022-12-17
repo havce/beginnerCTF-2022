@@ -3,6 +3,7 @@
 > There is a new e-commerce in the city. Can you buy a flag for me?
 > I know it's a bit expensive, but please try!
 
+*Authors: [@Ferr0x](https://github.com/Ferr0x), [@kriive](https://github.com/kriive)*
 ## Solution
 There is a bug when the new credit is computed after buying 
 something. If the quantity of the item is below zero, you can 

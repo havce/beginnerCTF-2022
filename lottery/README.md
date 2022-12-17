@@ -2,6 +2,7 @@
 ## Description
 > This lottery is soooooo boring...
 
+*Author: [@kriive](https://github.com/kriive)*
 ## Solution
 The function `rand()` is called without calling `srand()` first, so the 
 magic guess number is predictable. 

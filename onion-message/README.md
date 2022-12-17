@@ -1,6 +1,7 @@
 # Onion message
 Remember that real hackers always use onion to hide themselves.
 
+*Author: [@sioel0](https://github.com/sioel0)*
 ## Solution
 The flag was hidden as a comment of the immage, it was "hex-enocoded".
 You just had to use `file onion.jpg` to find out the comment and then you

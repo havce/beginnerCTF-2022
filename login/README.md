@@ -2,6 +2,7 @@
 ## Description
 > You need just to login to read the flag.
 
+*Author: [@Ferr0x](https://github.com/Ferr0x)*
 ## Solution
 There are three buffer overflow vulnerabilities, when using the `"%s"` format string inside `scanf`.
 The `"%s"` format string allows an attacker to input unlimited numbers of characters.

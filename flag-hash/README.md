@@ -2,6 +2,7 @@
 ## Description
 > PHP is safe i've heard...
 
+*Author: [@sichej](https://github.com/sichej)*
 ## Solution
 In order to get the flag, we must enter something whose md5sum computes to the same of the flag 
 (in cryptography this is called a [hash collision](https://en.wikipedia.org/wiki/Hash_collision)).

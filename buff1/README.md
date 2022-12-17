@@ -2,6 +2,7 @@
 ## Description
 > can u call the win function?
 
+*Author: [@Ferr0x](https://github.com/Ferr0x)*
 ## Solution
 There is a buffer overflow vulnerability when using `gets`.
 

@@ -3,6 +3,7 @@
 ## Description
 > My employer asked me to create a secure login system for our company, it was super easy. Now we are protected... aren't we?
 
+*Author: [@samuelevalperta](https://github.com/samuelevalperta)*
 ## Solution
 The correct password to log-in is hardcoded in the binary file without any obfuscation.<br>
 With the command `strings secure-login` you are able to print all the strings saved on the binary, including the flag. 

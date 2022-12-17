@@ -2,6 +2,7 @@
 ## Description
 > I wrote this oscilloscope readings manager, with a simple shell attached. It is really super secure.
 
+*Author: [@kriive](https://github.com/kriive)*
 ## Solution
 There is a command injection vulnerability in the change password function.
 ```c
