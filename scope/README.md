@@ -19,7 +19,7 @@ res = system(buf) == 0;
 If you input `"; cat flag.txt #` you effectively execute `cat flag.txt`. 
 
 In the original exploit, you didn't know the admin password, so you
-couldn't trigger the command injection without knowing the password.
+couldn't trigger the command injection without first knowing the password.
 
 In this snippet there is another vulnerability: the check via the `strncmp` function is broken. 
 If you send an empty string you can bypass the check and enable the command injection
